@@ -130,7 +130,7 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Quick Actions",
           items: [
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "New enterprise" },
+            { icon: <AddLarge size={16} className="text-foreground" />, label: "New enterprise", link: "/enterprise/add-enterprise" },
             { icon: <Settings size={16} className="text-foreground" />, label: "Filter enterprises" },
           ],
         },

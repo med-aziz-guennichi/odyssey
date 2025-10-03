@@ -18,6 +18,7 @@ import { Route as appReportsRouteImport } from './../routes/(app)/reports'
 import { Route as appDashboardRouteImport } from './../routes/(app)/dashboard'
 import { Route as appAnalyticsRouteImport } from './../routes/(app)/analytics'
 import { Route as appAboutRouteImport } from './../routes/(app)/about'
+import { Route as appEnterpriseAddEnterpriseRouteImport } from './../routes/(app)/enterprise/add-enterprise'
 
 const appRouteRoute = appRouteRouteImport.update({
   id: '/(app)',
@@ -63,6 +64,12 @@ const appAboutRoute = appAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => appRouteRoute,
 } as any)
+const appEnterpriseAddEnterpriseRoute =
+  appEnterpriseAddEnterpriseRouteImport.update({
+    id: '/enterprise/add-enterprise',
+    path: '/enterprise/add-enterprise',
+    getParentRoute: () => appRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof appIndexRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof appSettingsRoute
   '/users': typeof appUsersRoute
   '/login': typeof authLoginRoute
+  '/enterprise/add-enterprise': typeof appEnterpriseAddEnterpriseRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof appAboutRoute
@@ -83,6 +91,7 @@ export interface FileRoutesByTo {
   '/users': typeof appUsersRoute
   '/login': typeof authLoginRoute
   '/': typeof appIndexRoute
+  '/enterprise/add-enterprise': typeof appEnterpriseAddEnterpriseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -95,6 +104,7 @@ export interface FileRoutesById {
   '/(app)/users': typeof appUsersRoute
   '/(auth)/login': typeof authLoginRoute
   '/(app)/': typeof appIndexRoute
+  '/(app)/enterprise/add-enterprise': typeof appEnterpriseAddEnterpriseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/users'
     | '/login'
+    | '/enterprise/add-enterprise'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/about'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/users'
     | '/login'
     | '/'
+    | '/enterprise/add-enterprise'
   id:
     | '__root__'
     | '/(app)'
@@ -128,6 +140,7 @@ export interface FileRouteTypes {
     | '/(app)/users'
     | '/(auth)/login'
     | '/(app)/'
+    | '/(app)/enterprise/add-enterprise'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -200,6 +213,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof appAboutRouteImport
       parentRoute: typeof appRouteRoute
     }
+    '/(app)/enterprise/add-enterprise': {
+      id: '/(app)/enterprise/add-enterprise'
+      path: '/enterprise/add-enterprise'
+      fullPath: '/enterprise/add-enterprise'
+      preLoaderRoute: typeof appEnterpriseAddEnterpriseRouteImport
+      parentRoute: typeof appRouteRoute
+    }
   }
 }
 
@@ -211,6 +231,7 @@ interface appRouteRouteChildren {
   appSettingsRoute: typeof appSettingsRoute
   appUsersRoute: typeof appUsersRoute
   appIndexRoute: typeof appIndexRoute
+  appEnterpriseAddEnterpriseRoute: typeof appEnterpriseAddEnterpriseRoute
 }
 
 const appRouteRouteChildren: appRouteRouteChildren = {
@@ -221,6 +242,7 @@ const appRouteRouteChildren: appRouteRouteChildren = {
   appSettingsRoute: appSettingsRoute,
   appUsersRoute: appUsersRoute,
   appIndexRoute: appIndexRoute,
+  appEnterpriseAddEnterpriseRoute: appEnterpriseAddEnterpriseRoute,
 }
 
 const appRouteRouteWithChildren = appRouteRoute._addFileChildren(

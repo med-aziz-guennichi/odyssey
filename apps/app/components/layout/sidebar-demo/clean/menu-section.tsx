@@ -1,3 +1,4 @@
+import { useNavigate } from "@tanstack/react-router";
 import { softSpringEasing } from "./constants";
 import { MenuItem as Row } from "./menu-item";
 import { SubMenuItem } from "./sub-menu-item";
@@ -14,6 +15,7 @@ export function MenuSection({
   onToggleExpanded: (itemKey: string) => void;
   isCollapsed?: boolean;
 }) {
+  const navigate = useNavigate();
   return (
     <div className="box-border content-stretch flex flex-col items-start justify-stretch p-0 relative shrink-0 w-full">
       <div
@@ -39,7 +41,7 @@ export function MenuSection({
               item={item}
               isExpanded={isExpanded}
               onToggle={() => onToggleExpanded(itemKey)}
-              onItemClick={() => console.log(`Clicked ${item.label}`)}
+              onItemClick={() => navigate({ to: item.link ?? "#" })}
               isCollapsed={isCollapsed}
             />
             {isExpanded && item.children && !isCollapsed && (

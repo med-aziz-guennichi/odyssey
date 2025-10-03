@@ -5,6 +5,7 @@ export interface MenuItem {
   label: string;
   hasDropdown?: boolean;
   isActive?: boolean;
+  link?: string;
   children?: MenuItem[];
 }
 
