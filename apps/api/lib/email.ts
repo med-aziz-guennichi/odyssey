@@ -2,11 +2,11 @@
 /* ODYSSEY-License-Identifier: MIT */
 
 import {
-    EmailVerification,
-    OTPEmail,
-    PasswordReset,
-    renderEmailToHtml,
-    renderEmailToText,
+  EmailVerification,
+  OTPEmail,
+  PasswordReset,
+  renderEmailToHtml,
+  renderEmailToText,
 } from "@repo/email";
 import { Resend } from "resend";
 import { z } from "zod";
@@ -197,30 +197,30 @@ export async function sendOTP(
     type: "sign-in" | "email-verification" | "forget-password";
   },
 ) {
-try {
+  try {
     const component = OTPEmail({
-    otp: options.otp,
-    type: options.type,
-    appName: env.APP_NAME,
-    appUrl: env.APP_ORIGIN,
-  });
+      otp: options.otp,
+      type: options.type,
+      appName: env.APP_NAME,
+      appUrl: env.APP_ORIGIN,
+    });
 
-  const html = await renderEmailToHtml(component);
-  const text = await renderEmailToText(component);
+    const html = await renderEmailToHtml(component);
+    const text = await renderEmailToText(component);
 
-  const typeLabels = {
-    "sign-in": "Sign In",
-    "email-verification": "Email Verification",
-    "forget-password": "Password Reset",
-  };
+    const typeLabels = {
+      "sign-in": "Sign In",
+      "email-verification": "Email Verification",
+      "forget-password": "Password Reset",
+    };
 
-  return sendEmail(env, {
-    to: options.email,
-    subject: `Your ${typeLabels[options.type]} code`,
-    html,
-    text,
-  });
-} catch (error) {
-  console.error("Error sending OTP email:", error);
-}
+    return sendEmail(env, {
+      to: options.email,
+      subject: `Your ${typeLabels[options.type]} code`,
+      html,
+      text,
+    });
+  } catch (error) {
+    console.error("Error sending OTP email:", error);
+  }
 }

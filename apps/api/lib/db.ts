@@ -72,4 +72,3 @@ export function createDb(db: Hyperdrive) {
  * ```
  */
 export { schema as Db };
-

@@ -11,12 +11,9 @@ interface HeaderProps {
 }
 
 export function Header({ isSidebarOpen, onMenuToggle }: HeaderProps) {
+  console.log("Header render, isSidebarOpen:", isSidebarOpen, onMenuToggle);
   return (
-    <header
-      className="h-14 sticky top-0 z-20 flex items-center justify-between px-4 border-b border-border bg-background/80 backdrop-blur"
-    >
-
-
+    <header className="h-14 sticky top-0 z-20 flex items-center justify-between px-4 border-b border-border bg-background/80 backdrop-blur">
       {/* Middle: (Optional) Search or breadcrumbs */}
       <div className="hidden md:flex flex-1 px-4">
         {/* Example placeholder for breadcrumbs */}

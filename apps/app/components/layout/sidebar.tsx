@@ -12,8 +12,9 @@ interface SidebarProps {
 export function Sidebar({ isOpen }: SidebarProps) {
   return (
     <aside
-      className={`${isOpen ? "w-64" : "w-0"
-        } transition-all duration-300 ease-in-out bg-muted/50 border-r overflow-hidden`}
+      className={`${
+        isOpen ? "w-64" : "w-0"
+      } transition-all duration-300 ease-in-out bg-muted/50 border-r overflow-hidden`}
     >
       <div className="h-full flex flex-col">
         <div className="h-14 flex items-center px-4 border-b">

@@ -6,7 +6,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle
+  CardTitle,
 } from "@repo/ui";
 import { createFileRoute } from "@tanstack/react-router";
 import { Activity, FileText, TrendingUp, Users } from "lucide-react";

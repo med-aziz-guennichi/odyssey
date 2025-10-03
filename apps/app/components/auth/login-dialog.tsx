@@ -85,7 +85,7 @@ export function useLoginDialog() {
           <LoginForm
             variant="modal"
             onSuccess={handleSuccess}
-          // showTerms defaults to false for modals per LoginForm implementation
+            // showTerms defaults to false for modals per LoginForm implementation
           />
         </DialogContent>
       </Dialog>

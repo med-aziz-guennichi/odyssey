@@ -15,7 +15,9 @@ export function useNavigateAdapter() {
           const nav = hook();
           navigate = (to: string) => nav({ to });
         }
-      } catch { /* noop */ }
+      } catch {
+        /* noop */
+      }
     })();
   }, []);
 
@@ -29,7 +31,9 @@ export function useNavigateAdapter() {
           const router = hook();
           navigate = (to: string) => router.push(to);
         }
-      } catch { /* noop */ }
+      } catch {
+        /* noop */
+      }
     })();
   }, []);
 

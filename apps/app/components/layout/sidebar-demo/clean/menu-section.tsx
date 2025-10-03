@@ -19,8 +19,9 @@ export function MenuSection({
   return (
     <div className="box-border content-stretch flex flex-col items-start justify-stretch p-0 relative shrink-0 w-full">
       <div
-        className={`relative shrink-0 w-full transition-all duration-500 overflow-hidden ${isCollapsed ? "h-0 opacity-0" : "h-10 opacity-100"
-          }`}
+        className={`relative shrink-0 w-full transition-all duration-500 overflow-hidden ${
+          isCollapsed ? "h-0 opacity-0" : "h-10 opacity-100"
+        }`}
         style={{ transitionTimingFunction: softSpringEasing }}
       >
         <div className="flex flex-col justify-center relative size-full">

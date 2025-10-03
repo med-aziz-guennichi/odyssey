@@ -165,10 +165,11 @@ function Reports() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span
-                    className={`px-2 py-1 text-xs rounded-full ${report.status === "Ready"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-yellow-100 text-yellow-700"
-                      }`}
+                    className={`px-2 py-1 text-xs rounded-full ${
+                      report.status === "Ready"
+                        ? "bg-green-100 text-green-700"
+                        : "bg-yellow-100 text-yellow-700"
+                    }`}
                   >
                     {report.status}
                   </span>

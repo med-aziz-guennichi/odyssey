@@ -2,10 +2,10 @@
 /* ODYSSEY-License-Identifier: MIT */
 
 import {
-    anonymousClient,
-    emailOTPClient,
-    organizationClient,
-    passkeyClient,
+  anonymousClient,
+  emailOTPClient,
+  organizationClient,
+  passkeyClient,
 } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/react";
 import { authConfig } from "./auth-config";

@@ -30,7 +30,7 @@ import {
   Time,
   User,
   UserMultiple,
-  View
+  View,
 } from "@carbon/icons-react";
 import { useState } from "react";
 
@@ -103,30 +103,27 @@ function Avatar() {
   );
 }
 
-function SearchContainer({
-  isCollapsed = false,
-}: {
-  isCollapsed?: boolean;
-}) {
+function SearchContainer({ isCollapsed = false }: { isCollapsed?: boolean }) {
   const [searchValue, setSearchValue] = useState("");
 
   return (
     <div
-      className={`relative shrink-0 transition-all duration-500 ${isCollapsed ? "w-full flex justify-center" : "w-full"
-        }`}
+      className={`relative shrink-0 transition-all duration-500 ${
+        isCollapsed ? "w-full flex justify-center" : "w-full"
+      }`}
       style={{ transitionTimingFunction: softSpringEasing }}
       data-name="Search Container"
     >
       <div
-        className={`bg-[#000000] h-10 relative rounded-lg flex items-center transition-all duration-500 ${isCollapsed
-          ? "w-10 min-w-10 justify-center"
-          : "w-full"
-          }`}
+        className={`bg-[#000000] h-10 relative rounded-lg flex items-center transition-all duration-500 ${
+          isCollapsed ? "w-10 min-w-10 justify-center" : "w-full"
+        }`}
         style={{ transitionTimingFunction: softSpringEasing }}
       >
         <div
-          className={`flex items-center justify-center shrink-0 transition-all duration-500 ${isCollapsed ? "p-1" : "px-1"
-            }`}
+          className={`flex items-center justify-center shrink-0 transition-all duration-500 ${
+            isCollapsed ? "p-1" : "px-1"
+          }`}
           style={{ transitionTimingFunction: softSpringEasing }}
         >
           <div className="size-8 flex items-center justify-center">
@@ -134,8 +131,9 @@ function SearchContainer({
           </div>
         </div>
         <div
-          className={`flex-1 min-h-px min-w-px relative transition-opacity duration-500 overflow-hidden ${isCollapsed ? "opacity-0 w-0" : "opacity-100"
-            }`}
+          className={`flex-1 min-h-px min-w-px relative transition-opacity duration-500 overflow-hidden ${
+            isCollapsed ? "opacity-0 w-0" : "opacity-100"
+          }`}
           style={{ transitionTimingFunction: softSpringEasing }}
         >
           <div className="flex flex-col justify-center relative size-full">
@@ -201,18 +199,19 @@ function MenuItem({
 
   return (
     <div
-      className={`relative shrink-0 transition-all duration-500 ${isCollapsed ? "w-full flex justify-center" : "w-full"
-        }`}
+      className={`relative shrink-0 transition-all duration-500 ${
+        isCollapsed ? "w-full flex justify-center" : "w-full"
+      }`}
       style={{ transitionTimingFunction: softSpringEasing }}
     >
       <div
-        className={`select-none rounded-lg cursor-pointer transition-all duration-500 flex items-center relative my-0.5 ${item.isActive
-          ? "bg-neutral-900"
-          : "hover:bg-muted"
-          } ${isCollapsed
+        className={`select-none rounded-lg cursor-pointer transition-all duration-500 flex items-center relative my-0.5 ${
+          item.isActive ? "bg-neutral-900" : "hover:bg-muted"
+        } ${
+          isCollapsed
             ? "w-10 min-w-10 h-10 justify-center p-4"
             : "w-full h-10 px-4 py-2"
-          }`}
+        }`}
         style={{ transitionTimingFunction: softSpringEasing }}
         onClick={handleClick}
         title={isCollapsed ? item.label : undefined}
@@ -221,8 +220,9 @@ function MenuItem({
           {item.icon}
         </div>
         <div
-          className={`flex-1 min-h-px min-w-px relative transition-opacity duration-500 overflow-hidden ${isCollapsed ? "opacity-0 w-0" : "opacity-100 ml-3"
-            }`}
+          className={`flex-1 min-h-px min-w-px relative transition-opacity duration-500 overflow-hidden ${
+            isCollapsed ? "opacity-0 w-0" : "opacity-100 ml-3"
+          }`}
           style={{ transitionTimingFunction: softSpringEasing }}
         >
           <div className="flex flex-col justify-center relative size-full">
@@ -233,8 +233,9 @@ function MenuItem({
         </div>
         {item.hasDropdown && (
           <div
-            className={`flex items-center justify-center shrink-0 transition-opacity duration-500 ${isCollapsed ? "opacity-0 w-0" : "opacity-100 ml-2"
-              }`}
+            className={`flex items-center justify-center shrink-0 transition-opacity duration-500 ${
+              isCollapsed ? "opacity-0 w-0" : "opacity-100 ml-2"
+            }`}
             style={{
               transitionTimingFunction: softSpringEasing,
             }}
@@ -244,9 +245,7 @@ function MenuItem({
               className={`text-foreground transition-transform duration-500`}
               style={{
                 transitionTimingFunction: softSpringEasing,
-                transform: isExpanded
-                  ? "rotate(180deg)"
-                  : "rotate(0deg)",
+                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
               }}
             />
           </div>
@@ -293,8 +292,9 @@ function MenuSection({
   return (
     <div className="box-border content-stretch flex flex-col items-start justify-stretch p-0 relative shrink-0 w-full">
       <div
-        className={`relative shrink-0 w-full transition-all duration-500 overflow-hidden ${isCollapsed ? "h-0 opacity-0" : "h-10 opacity-100"
-          }`}
+        className={`relative shrink-0 w-full transition-all duration-500 overflow-hidden ${
+          isCollapsed ? "h-0 opacity-0" : "h-10 opacity-100"
+        }`}
         style={{ transitionTimingFunction: softSpringEasing }}
       >
         <div className="flex flex-col justify-center relative size-full">
@@ -311,17 +311,12 @@ function MenuSection({
         const itemKey = `${section.title}-${index}`;
         const isExpanded = expandedItems.has(itemKey);
         return (
-          <div
-            key={itemKey}
-            className="w-full flex flex-col content-stretch"
-          >
+          <div key={itemKey} className="w-full flex flex-col content-stretch">
             <MenuItem
               item={item}
               isExpanded={isExpanded}
               onToggle={() => onToggleExpanded(itemKey)}
-              onItemClick={() =>
-                console.log(`Clicked ${item.label}`)
-              }
+              onItemClick={() => console.log(`Clicked ${item.label}`)}
               isCollapsed={isCollapsed}
             />
             {isExpanded && item.children && !isCollapsed && (
@@ -330,9 +325,7 @@ function MenuSection({
                   <SubMenuItem
                     key={`${itemKey}-${childIndex}`}
                     item={child}
-                    onItemClick={() =>
-                      console.log(`Clicked ${child.label}`)
-                    }
+                    onItemClick={() => console.log(`Clicked ${child.label}`)}
                   />
                 ))}
               </div>
@@ -344,9 +337,7 @@ function MenuSection({
   );
 }
 
-function getSidebarContent(
-  activeSection: string,
-): SidebarContent {
+function getSidebarContent(activeSection: string): SidebarContent {
   const contentMap: Record<string, SidebarContent> = {
     dashboard: {
       title: "Dashboard",
@@ -355,19 +346,12 @@ function getSidebarContent(
           title: "Dashboard Types",
           items: [
             {
-              icon: (
-                <View size={16} className="text-foreground" />
-              ),
+              icon: <View size={16} className="text-foreground" />,
               label: "Overview",
               isActive: true,
             },
             {
-              icon: (
-                <Dashboard
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Dashboard size={16} className="text-foreground" />,
               label: "Executive Summary",
               hasDropdown: true,
               children: [
@@ -378,12 +362,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <ChartBar
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <ChartBar size={16} className="text-foreground" />,
               label: "Operations Dashboard",
               hasDropdown: true,
               children: [
@@ -394,12 +373,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Analytics
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Analytics size={16} className="text-foreground" />,
               label: "Financial Dashboard",
               hasDropdown: true,
               children: [
@@ -415,9 +389,7 @@ function getSidebarContent(
           title: "Report Summaries",
           items: [
             {
-              icon: (
-                <Report size={16} className="text-foreground" />
-              ),
+              icon: <Report size={16} className="text-foreground" />,
               label: "Weekly Reports",
               hasDropdown: true,
               children: [
@@ -428,12 +400,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <StarFilled
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <StarFilled size={16} className="text-foreground" />,
               label: "Monthly Insights",
               hasDropdown: true,
               children: [
@@ -444,9 +411,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <View size={16} className="text-foreground" />
-              ),
+              icon: <View size={16} className="text-foreground" />,
               label: "Quarterly Analysis",
               hasDropdown: true,
               children: [
@@ -462,12 +427,7 @@ function getSidebarContent(
           title: "Business Intelligence",
           items: [
             {
-              icon: (
-                <ChartBar
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <ChartBar size={16} className="text-foreground" />,
               label: "Performance Metrics",
               hasDropdown: true,
               children: [
@@ -478,12 +438,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Analytics
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Analytics size={16} className="text-foreground" />,
               label: "Predictive Analytics",
               hasDropdown: true,
               children: [
@@ -504,18 +459,11 @@ function getSidebarContent(
           title: "Quick Actions",
           items: [
             {
-              icon: (
-                <AddLarge
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <AddLarge size={16} className="text-foreground" />,
               label: "New task",
             },
             {
-              icon: (
-                <Filter size={16} className="text-foreground" />
-              ),
+              icon: <Filter size={16} className="text-foreground" />,
               label: "Filter tasks",
             },
           ],
@@ -524,9 +472,7 @@ function getSidebarContent(
           title: "My Tasks",
           items: [
             {
-              icon: (
-                <Time size={16} className="text-foreground" />
-              ),
+              icon: <Time size={16} className="text-foreground" />,
               label: "Due today",
               hasDropdown: true,
               children: [
@@ -536,12 +482,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <InProgress
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <InProgress size={16} className="text-foreground" />,
               label: "In progress",
               hasDropdown: true,
               children: [
@@ -550,12 +491,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <CheckmarkOutline
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <CheckmarkOutline size={16} className="text-foreground" />,
               label: "Completed",
               hasDropdown: true,
               children: [
@@ -570,9 +506,7 @@ function getSidebarContent(
           title: "Other",
           items: [
             {
-              icon: (
-                <Flag size={16} className="text-foreground" />
-              ),
+              icon: <Flag size={16} className="text-foreground" />,
               label: "Priority tasks",
               hasDropdown: true,
               children: [
@@ -581,12 +515,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Archive
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Archive size={16} className="text-foreground" />,
               label: "Archived",
             },
           ],
@@ -600,18 +529,11 @@ function getSidebarContent(
           title: "Quick Actions",
           items: [
             {
-              icon: (
-                <AddLarge
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <AddLarge size={16} className="text-foreground" />,
               label: "New project",
             },
             {
-              icon: (
-                <Filter size={16} className="text-foreground" />
-              ),
+              icon: <Filter size={16} className="text-foreground" />,
               label: "Filter projects",
             },
           ],
@@ -620,12 +542,7 @@ function getSidebarContent(
           title: "Active Projects",
           items: [
             {
-              icon: (
-                <FolderOpen
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <FolderOpen size={16} className="text-foreground" />,
               label: "Web Application",
               hasDropdown: true,
               children: [
@@ -635,12 +552,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <FolderOpen
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <FolderOpen size={16} className="text-foreground" />,
               label: "Mobile App",
               hasDropdown: true,
               children: [
@@ -654,21 +566,11 @@ function getSidebarContent(
           title: "Other",
           items: [
             {
-              icon: (
-                <CheckmarkOutline
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <CheckmarkOutline size={16} className="text-foreground" />,
               label: "Completed",
             },
             {
-              icon: (
-                <Archive
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Archive size={16} className="text-foreground" />,
               label: "Archived",
             },
           ],
@@ -682,24 +584,15 @@ function getSidebarContent(
           title: "Views",
           items: [
             {
-              icon: (
-                <View size={16} className="text-foreground" />
-              ),
+              icon: <View size={16} className="text-foreground" />,
               label: "Month view",
             },
             {
-              icon: (
-                <CalendarIcon
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <CalendarIcon size={16} className="text-foreground" />,
               label: "Week view",
             },
             {
-              icon: (
-                <Time size={16} className="text-foreground" />
-              ),
+              icon: <Time size={16} className="text-foreground" />,
               label: "Day view",
             },
           ],
@@ -708,9 +601,7 @@ function getSidebarContent(
           title: "Events",
           items: [
             {
-              icon: (
-                <Time size={16} className="text-foreground" />
-              ),
+              icon: <Time size={16} className="text-foreground" />,
               label: "Today's events",
               hasDropdown: true,
               children: [
@@ -720,12 +611,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <CalendarIcon
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <CalendarIcon size={16} className="text-foreground" />,
               label: "Upcoming events",
             },
           ],
@@ -734,18 +620,11 @@ function getSidebarContent(
           title: "Quick Actions",
           items: [
             {
-              icon: (
-                <AddLarge
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <AddLarge size={16} className="text-foreground" />,
               label: "New event",
             },
             {
-              icon: (
-                <Share size={16} className="text-foreground" />
-              ),
+              icon: <Share size={16} className="text-foreground" />,
               label: "Share calendar",
             },
           ],
@@ -759,9 +638,7 @@ function getSidebarContent(
           title: "My Teams",
           items: [
             {
-              icon: (
-                <Group size={16} className="text-foreground" />
-              ),
+              icon: <Group size={16} className="text-foreground" />,
               label: "Development Team",
               hasDropdown: true,
               children: [
@@ -771,15 +648,10 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Group size={16} className="text-foreground" />
-              ),
+              icon: <Group size={16} className="text-foreground" />,
               label: "Design Team",
               hasDropdown: true,
-              children: [
-                { label: "Sarah Wilson" },
-                { label: "Tom Brown" },
-              ],
+              children: [{ label: "Sarah Wilson" }, { label: "Tom Brown" }],
             },
           ],
         },
@@ -787,21 +659,11 @@ function getSidebarContent(
           title: "Quick Actions",
           items: [
             {
-              icon: (
-                <AddLarge
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <AddLarge size={16} className="text-foreground" />,
               label: "Invite member",
             },
             {
-              icon: (
-                <UserMultiple
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <UserMultiple size={16} className="text-foreground" />,
               label: "Manage teams",
             },
           ],
@@ -815,27 +677,15 @@ function getSidebarContent(
           title: "Reports",
           items: [
             {
-              icon: (
-                <Report size={16} className="text-foreground" />
-              ),
+              icon: <Report size={16} className="text-foreground" />,
               label: "Performance report",
             },
             {
-              icon: (
-                <ChartBar
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <ChartBar size={16} className="text-foreground" />,
               label: "Task completion",
             },
             {
-              icon: (
-                <Analytics
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Analytics size={16} className="text-foreground" />,
               label: "Team productivity",
             },
           ],
@@ -844,12 +694,7 @@ function getSidebarContent(
           title: "Insights",
           items: [
             {
-              icon: (
-                <StarFilled
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <StarFilled size={16} className="text-foreground" />,
               label: "Key metrics",
               hasDropdown: true,
               children: [
@@ -870,21 +715,11 @@ function getSidebarContent(
           title: "Quick Actions",
           items: [
             {
-              icon: (
-                <CloudUpload
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <CloudUpload size={16} className="text-foreground" />,
               label: "Upload file",
             },
             {
-              icon: (
-                <AddLarge
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <AddLarge size={16} className="text-foreground" />,
               label: "New folder",
             },
           ],
@@ -893,12 +728,7 @@ function getSidebarContent(
           title: "Recent Files",
           items: [
             {
-              icon: (
-                <DocumentAdd
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <DocumentAdd size={16} className="text-foreground" />,
               label: "Recent documents",
               hasDropdown: true,
               children: [
@@ -908,9 +738,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Share size={16} className="text-foreground" />
-              ),
+              icon: <Share size={16} className="text-foreground" />,
               label: "Shared with me",
             },
           ],
@@ -919,18 +747,11 @@ function getSidebarContent(
           title: "Organization",
           items: [
             {
-              icon: (
-                <Folder size={16} className="text-foreground" />
-              ),
+              icon: <Folder size={16} className="text-foreground" />,
               label: "All folders",
             },
             {
-              icon: (
-                <Archive
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Archive size={16} className="text-foreground" />,
               label: "Archived files",
             },
           ],
@@ -944,27 +765,15 @@ function getSidebarContent(
           title: "Account",
           items: [
             {
-              icon: (
-                <User size={16} className="text-foreground" />
-              ),
+              icon: <User size={16} className="text-foreground" />,
               label: "Profile settings",
             },
             {
-              icon: (
-                <Security
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Security size={16} className="text-foreground" />,
               label: "Security",
             },
             {
-              icon: (
-                <Notification
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Notification size={16} className="text-foreground" />,
               label: "Notifications",
             },
           ],
@@ -973,12 +782,7 @@ function getSidebarContent(
           title: "Workspace",
           items: [
             {
-              icon: (
-                <Settings
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Settings size={16} className="text-foreground" />,
               label: "Preferences",
               hasDropdown: true,
               children: [
@@ -988,12 +792,7 @@ function getSidebarContent(
               ],
             },
             {
-              icon: (
-                <Integration
-                  size={16}
-                  className="text-foreground"
-                />
-              ),
+              icon: <Integration size={16} className="text-foreground" />,
               label: "Integrations",
             },
           ],
@@ -1017,9 +816,10 @@ function IconNavButton({
   return (
     <div
       className={`box-border content-stretch flex flex-row items-center justify-center overflow-clip p-0 relative rounded-lg shrink-0 size-10 min-w-10 cursor-pointer transition-colors duration-500
-        ${isActive
-          ? "bg-neutral-800 text-foreground"
-          : "hover:bg-muted text-neutral-400 hover:text-neutral-300"
+        ${
+          isActive
+            ? "bg-neutral-800 text-foreground"
+            : "hover:bg-muted text-neutral-400 hover:text-neutral-300"
         }`}
       style={{ transitionTimingFunction: softSpringEasing }}
       data-name="Icon Nav Button"
@@ -1160,9 +960,7 @@ function SectionTitle({
         >
           <div className="box-border content-stretch flex flex-col gap-2 items-start justify-center px-2 py-1 relative shrink-0">
             <div className="font-['Lexend:SemiBold',_sans-serif] font-semibold leading-[0] relative shrink-0 text-[18px] text-left text-foreground text-nowrap">
-              <p className="block leading-[27px] whitespace-pre">
-                {title}
-              </p>
+              <p className="block leading-[27px] whitespace-pre">{title}</p>
             </div>
           </div>
         </div>
@@ -1188,14 +986,8 @@ function SectionTitle({
   );
 }
 
-function DetailSidebar({
-  activeSection,
-}: {
-  activeSection: string;
-}) {
-  const [expandedItems, setExpandedItems] = useState<
-    Set<string>
-  >(new Set());
+function DetailSidebar({ activeSection }: { activeSection: string }) {
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [isCollapsed, setIsCollapsed] = useState(false);
   const content = getSidebarContent(activeSection);
 
@@ -1215,10 +1007,9 @@ function DetailSidebar({
 
   return (
     <div
-      className={`bg-[#000000] box-border content-stretch flex flex-col gap-4 h-[800px] items-start justify-start overflow-visible p-4 relative rounded-r-2xl shrink-0 transition-all duration-500 ${isCollapsed
-        ? "w-16 min-w-16 !px-0 justify-center"
-        : "w-80"
-        }`}
+      className={`bg-[#000000] box-border content-stretch flex flex-col gap-4 h-[800px] items-start justify-start overflow-visible p-4 relative rounded-r-2xl shrink-0 transition-all duration-500 ${
+        isCollapsed ? "w-16 min-w-16 !px-0 justify-center" : "w-80"
+      }`}
       style={{ transitionTimingFunction: softSpringEasing }}
       data-name="Detail Sidebar"
     >
@@ -1230,10 +1021,11 @@ function DetailSidebar({
       <SearchContainer isCollapsed={isCollapsed} />
 
       <div
-        className={`basis-0 box-border content-stretch flex flex-col grow min-h-px min-w-10 p-0 relative shrink-0 w-full overflow-y-auto transition-all duration-500 ${isCollapsed
-          ? "gap-2 items-center justify-start"
-          : "gap-4 items-start justify-start"
-          }`}
+        className={`basis-0 box-border content-stretch flex flex-col grow min-h-px min-w-10 p-0 relative shrink-0 w-full overflow-y-auto transition-all duration-500 ${
+          isCollapsed
+            ? "gap-2 items-center justify-start"
+            : "gap-4 items-start justify-start"
+        }`}
         style={{ transitionTimingFunction: softSpringEasing }}
       >
         {content.sections.map((section, index) => (
@@ -1251,14 +1043,10 @@ function DetailSidebar({
 }
 
 function TwoLevelSidebar() {
-  const [activeSection, setActiveSection] =
-    useState("dashboard");
+  const [activeSection, setActiveSection] = useState("dashboard");
 
   return (
-    <div
-      className="flex flex-row"
-      data-name="Two Level Sidebar"
-    >
+    <div className="flex flex-row" data-name="Two Level Sidebar">
       <IconNavigation
         activeSection={activeSection}
         onSectionChange={setActiveSection}

@@ -45,7 +45,8 @@
     "ui:essentials": "bun --filter @repo/ui ui:essentials",
     "email:dev": "bun --filter @repo/email dev",
     "email:build": "bun --filter @repo/email build",
-    "email:export": "bun --filter @repo/email export"
+    "email:export": "bun --filter @repo/email export",
+    "precommit:check": "lint-staged"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.13.5",
@@ -106,11 +107,10 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "bunx eslint --max-warnings=0 --report-unused-disable-directives"
+    "*.{js,jsx,ts,tsx,cjs,mjs}": [
+      "bunx prettier --write",
+      "bunx eslint --fix --max-warnings=0 --cache"
     ],
-    "*": [
-      "bunx prettier --check --ignore-unknown"
-    ]
+    "*": "bunx prettier --write --ignore-unknown"
   }
 }

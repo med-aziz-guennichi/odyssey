@@ -5,8 +5,18 @@ import type { SearchItem } from "./types";
 /** Optional: your global routes outside the sidebar */
 export const coreRoutes: SearchItem[] = [
   { id: "home", title: "Home", href: "/", group: "Navigation" },
-  { id: "dashboard", title: "Dashboard", href: "/dashboard", group: "Navigation" },
-  { id: "analytics", title: "Analytics", href: "/analytics", group: "Navigation" },
+  {
+    id: "dashboard",
+    title: "Dashboard",
+    href: "/dashboard",
+    group: "Navigation",
+  },
+  {
+    id: "analytics",
+    title: "Analytics",
+    href: "/analytics",
+    group: "Navigation",
+  },
   { id: "settings", title: "Settings", href: "/settings", group: "Navigation" },
 ];
 
@@ -45,7 +55,10 @@ export function buildSidebarIndex(activeSection: string): SearchItem[] {
 }
 
 function slug(s: string) {
-  return s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+  return s
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
 }
 
 /** Final search data source (merge sidebar + core routes) */

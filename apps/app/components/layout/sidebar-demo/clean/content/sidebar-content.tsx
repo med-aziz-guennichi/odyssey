@@ -24,7 +24,7 @@ import {
   Time,
   User,
   UserMultiple,
-  View
+  View,
 } from "@carbon/icons-react";
 
 export function getSidebarContent(activeSection: string): SidebarContent {
@@ -35,7 +35,11 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Dashboard Types",
           items: [
-            { icon: <View size={16} className="text-foreground" />, label: "Overview", isActive: true },
+            {
+              icon: <View size={16} className="text-foreground" />,
+              label: "Overview",
+              isActive: true,
+            },
             {
               icon: <Dashboard size={16} className="text-foreground" />,
               label: "Executive Summary",
@@ -75,28 +79,37 @@ export function getSidebarContent(activeSection: string): SidebarContent {
           title: "Report Summaries",
           items: [
             {
-              icon: <Report size={16} className="text-foreground" />, label: "Weekly Reports", hasDropdown: true, children: [
+              icon: <Report size={16} className="text-foreground" />,
+              label: "Weekly Reports",
+              hasDropdown: true,
+              children: [
                 { label: "Team Productivity" },
                 { label: "Project Completion" },
                 { label: "Budget Utilization" },
                 { label: "Client Satisfaction" },
-              ]
+              ],
             },
             {
-              icon: <StarFilled size={16} className="text-foreground" />, label: "Monthly Insights", hasDropdown: true, children: [
+              icon: <StarFilled size={16} className="text-foreground" />,
+              label: "Monthly Insights",
+              hasDropdown: true,
+              children: [
                 { label: "Revenue Growth" },
                 { label: "New Clients" },
                 { label: "Team Expansion" },
                 { label: "Cost Reduction" },
-              ]
+              ],
             },
             {
-              icon: <View size={16} className="text-foreground" />, label: "Quarterly Analysis", hasDropdown: true, children: [
+              icon: <View size={16} className="text-foreground" />,
+              label: "Quarterly Analysis",
+              hasDropdown: true,
+              children: [
                 { label: "Market Position" },
                 { label: "ROI" },
                 { label: "Customer Retention" },
                 { label: "Innovation Index" },
-              ]
+              ],
             },
           ],
         },
@@ -104,20 +117,26 @@ export function getSidebarContent(activeSection: string): SidebarContent {
           title: "Business Intelligence",
           items: [
             {
-              icon: <ChartBar size={16} className="text-foreground" />, label: "Performance Metrics", hasDropdown: true, children: [
+              icon: <ChartBar size={16} className="text-foreground" />,
+              label: "Performance Metrics",
+              hasDropdown: true,
+              children: [
                 { label: "Sales Conversion" },
                 { label: "Lead Response Time" },
                 { label: "Customer Lifetime Value" },
                 { label: "Churn Rate" },
-              ]
+              ],
             },
             {
-              icon: <Analytics size={16} className="text-foreground" />, label: "Predictive Analytics", hasDropdown: true, children: [
+              icon: <Analytics size={16} className="text-foreground" />,
+              label: "Predictive Analytics",
+              hasDropdown: true,
+              children: [
                 { label: "Q4 Revenue Forecast" },
                 { label: "Resource Demand" },
                 { label: "Market Trends" },
                 { label: "Risk Assessment" },
-              ]
+              ],
             },
           ],
         },
@@ -130,32 +149,48 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Quick Actions",
           items: [
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "New enterprise", link: "/enterprise/add-enterprise" },
-            { icon: <Settings size={16} className="text-foreground" />, label: "Filter enterprises" },
+            {
+              icon: <AddLarge size={16} className="text-foreground" />,
+              label: "New enterprise",
+              link: "/enterprise/add-enterprise",
+            },
+            {
+              icon: <Settings size={16} className="text-foreground" />,
+              label: "Filter enterprises",
+            },
           ],
         },
         {
           title: "My Enterprises",
           items: [
             {
-              icon: <Time size={16} className="text-foreground" />, label: "Due today", hasDropdown: true, children: [
+              icon: <Time size={16} className="text-foreground" />,
+              label: "Due today",
+              hasDropdown: true,
+              children: [
                 { label: "Review design mockups" },
                 { label: "Update documentation" },
                 { label: "Test new feature" },
-              ]
+              ],
             },
             {
-              icon: <InProgress size={16} className="text-foreground" />, label: "In progress", hasDropdown: true, children: [
+              icon: <InProgress size={16} className="text-foreground" />,
+              label: "In progress",
+              hasDropdown: true,
+              children: [
                 { label: "Implement user auth" },
                 { label: "Database migration" },
-              ]
+              ],
             },
             {
-              icon: <CheckmarkOutline size={16} className="text-foreground" />, label: "Completed", hasDropdown: true, children: [
+              icon: <CheckmarkOutline size={16} className="text-foreground" />,
+              label: "Completed",
+              hasDropdown: true,
+              children: [
                 { label: "Fixed login bug" },
                 { label: "Updated dependencies" },
                 { label: "Code review completed" },
-              ]
+              ],
             },
           ],
         },
@@ -163,12 +198,18 @@ export function getSidebarContent(activeSection: string): SidebarContent {
           title: "Other",
           items: [
             {
-              icon: <Flag size={16} className="text-foreground" />, label: "Priority tasks", hasDropdown: true, children: [
+              icon: <Flag size={16} className="text-foreground" />,
+              label: "Priority tasks",
+              hasDropdown: true,
+              children: [
                 { label: "Security update" },
                 { label: "Client presentation" },
-              ]
+              ],
             },
-            { icon: <Archive size={16} className="text-foreground" />, label: "Archived" },
+            {
+              icon: <Archive size={16} className="text-foreground" />,
+              label: "Archived",
+            },
           ],
         },
       ],
@@ -180,33 +221,51 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Quick Actions",
           items: [
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "New project" },
-            { icon: <Settings size={16} className="text-foreground" />, label: "Filter projects" },
+            {
+              icon: <AddLarge size={16} className="text-foreground" />,
+              label: "New project",
+            },
+            {
+              icon: <Settings size={16} className="text-foreground" />,
+              label: "Filter projects",
+            },
           ],
         },
         {
           title: "Active Projects",
           items: [
             {
-              icon: <FolderOpen size={16} className="text-foreground" />, label: "Web Application", hasDropdown: true, children: [
+              icon: <FolderOpen size={16} className="text-foreground" />,
+              label: "Web Application",
+              hasDropdown: true,
+              children: [
                 { label: "Frontend development" },
                 { label: "API integration" },
                 { label: "Testing & QA" },
-              ]
+              ],
             },
             {
-              icon: <FolderOpen size={16} className="text-foreground" />, label: "Mobile App", hasDropdown: true, children: [
+              icon: <FolderOpen size={16} className="text-foreground" />,
+              label: "Mobile App",
+              hasDropdown: true,
+              children: [
                 { label: "UI/UX design" },
                 { label: "Native development" },
-              ]
+              ],
             },
           ],
         },
         {
           title: "Other",
           items: [
-            { icon: <CheckmarkOutline size={16} className="text-foreground" />, label: "Completed" },
-            { icon: <Archive size={16} className="text-foreground" />, label: "Archived" },
+            {
+              icon: <CheckmarkOutline size={16} className="text-foreground" />,
+              label: "Completed",
+            },
+            {
+              icon: <Archive size={16} className="text-foreground" />,
+              label: "Archived",
+            },
           ],
         },
       ],
@@ -218,29 +277,50 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Views",
           items: [
-            { icon: <View size={16} className="text-foreground" />, label: "Month view" },
-            { icon: <CalendarIcon size={16} className="text-foreground" />, label: "Week view" },
-            { icon: <Time size={16} className="text-foreground" />, label: "Day view" },
+            {
+              icon: <View size={16} className="text-foreground" />,
+              label: "Month view",
+            },
+            {
+              icon: <CalendarIcon size={16} className="text-foreground" />,
+              label: "Week view",
+            },
+            {
+              icon: <Time size={16} className="text-foreground" />,
+              label: "Day view",
+            },
           ],
         },
         {
           title: "Events",
           items: [
             {
-              icon: <Time size={16} className="text-foreground" />, label: "Today's events", hasDropdown: true, children: [
+              icon: <Time size={16} className="text-foreground" />,
+              label: "Today's events",
+              hasDropdown: true,
+              children: [
                 { label: "Team standup (9:00 AM)" },
                 { label: "Client call (2:00 PM)" },
                 { label: "Project review (4:00 PM)" },
-              ]
+              ],
             },
-            { icon: <CalendarIcon size={16} className="text-foreground" />, label: "Upcoming events" },
+            {
+              icon: <CalendarIcon size={16} className="text-foreground" />,
+              label: "Upcoming events",
+            },
           ],
         },
         {
           title: "Quick Actions",
           items: [
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "New event" },
-            { icon: <Share size={16} className="text-foreground" />, label: "Share calendar" },
+            {
+              icon: <AddLarge size={16} className="text-foreground" />,
+              label: "New event",
+            },
+            {
+              icon: <Share size={16} className="text-foreground" />,
+              label: "Share calendar",
+            },
           ],
         },
       ],
@@ -253,25 +333,34 @@ export function getSidebarContent(activeSection: string): SidebarContent {
           title: "My Teams",
           items: [
             {
-              icon: <Group size={16} className="text-foreground" />, label: "Development Team", hasDropdown: true, children: [
+              icon: <Group size={16} className="text-foreground" />,
+              label: "Development Team",
+              hasDropdown: true,
+              children: [
                 { label: "John Doe (Lead)" },
                 { label: "Jane Smith" },
                 { label: "Mike Johnson" },
-              ]
+              ],
             },
             {
-              icon: <Group size={16} className="text-foreground" />, label: "Design Team", hasDropdown: true, children: [
-                { label: "Sarah Wilson" },
-                { label: "Tom Brown" },
-              ]
+              icon: <Group size={16} className="text-foreground" />,
+              label: "Design Team",
+              hasDropdown: true,
+              children: [{ label: "Sarah Wilson" }, { label: "Tom Brown" }],
             },
           ],
         },
         {
           title: "Quick Actions",
           items: [
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "Invite member" },
-            { icon: <UserMultiple size={16} className="text-foreground" />, label: "Manage teams" },
+            {
+              icon: <AddLarge size={16} className="text-foreground" />,
+              label: "Invite member",
+            },
+            {
+              icon: <UserMultiple size={16} className="text-foreground" />,
+              label: "Manage teams",
+            },
           ],
         },
       ],
@@ -283,21 +372,33 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Reports",
           items: [
-            { icon: <Report size={16} className="text-foreground" />, label: "Performance report" },
-            { icon: <ChartBar size={16} className="text-foreground" />, label: "Task completion" },
-            { icon: <Analytics size={16} className="text-foreground" />, label: "Team productivity" },
+            {
+              icon: <Report size={16} className="text-foreground" />,
+              label: "Performance report",
+            },
+            {
+              icon: <ChartBar size={16} className="text-foreground" />,
+              label: "Task completion",
+            },
+            {
+              icon: <Analytics size={16} className="text-foreground" />,
+              label: "Team productivity",
+            },
           ],
         },
         {
           title: "Insights",
           items: [
             {
-              icon: <StarFilled size={16} className="text-foreground" />, label: "Key metrics", hasDropdown: true, children: [
+              icon: <StarFilled size={16} className="text-foreground" />,
+              label: "Key metrics",
+              hasDropdown: true,
+              children: [
                 { label: "Task completion metrics" },
                 { label: "Time tracking analysis" },
                 { label: "Team efficiency report" },
                 { label: "Performance benchmarks" },
-              ]
+              ],
             },
           ],
         },
@@ -310,28 +411,46 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Quick Actions",
           items: [
-            { icon: <CloudUpload size={16} className="text-foreground" />, label: "Upload file" },
-            { icon: <AddLarge size={16} className="text-foreground" />, label: "New folder" },
+            {
+              icon: <CloudUpload size={16} className="text-foreground" />,
+              label: "Upload file",
+            },
+            {
+              icon: <AddLarge size={16} className="text-foreground" />,
+              label: "New folder",
+            },
           ],
         },
         {
           title: "Recent Files",
           items: [
             {
-              icon: <DocumentAdd size={16} className="text-foreground" />, label: "Recent documents", hasDropdown: true, children: [
+              icon: <DocumentAdd size={16} className="text-foreground" />,
+              label: "Recent documents",
+              hasDropdown: true,
+              children: [
                 { label: "Project proposal.pdf" },
                 { label: "Meeting notes.docx" },
                 { label: "Design specs.figma" },
-              ]
+              ],
             },
-            { icon: <Share size={16} className="text-foreground" />, label: "Shared with me" },
+            {
+              icon: <Share size={16} className="text-foreground" />,
+              label: "Shared with me",
+            },
           ],
         },
         {
           title: "Organization",
           items: [
-            { icon: <Folder size={16} className="text-foreground" />, label: "All folders" },
-            { icon: <Archive size={16} className="text-foreground" />, label: "Archived files" },
+            {
+              icon: <Folder size={16} className="text-foreground" />,
+              label: "All folders",
+            },
+            {
+              icon: <Archive size={16} className="text-foreground" />,
+              label: "Archived files",
+            },
           ],
         },
       ],
@@ -343,22 +462,37 @@ export function getSidebarContent(activeSection: string): SidebarContent {
         {
           title: "Account",
           items: [
-            { icon: <User size={16} className="text-foreground" />, label: "Profile settings" },
-            { icon: <Security size={16} className="text-foreground" />, label: "Security" },
-            { icon: <Notification size={16} className="text-foreground" />, label: "Notifications" },
+            {
+              icon: <User size={16} className="text-foreground" />,
+              label: "Profile settings",
+            },
+            {
+              icon: <Security size={16} className="text-foreground" />,
+              label: "Security",
+            },
+            {
+              icon: <Notification size={16} className="text-foreground" />,
+              label: "Notifications",
+            },
           ],
         },
         {
           title: "Workspace",
           items: [
             {
-              icon: <Settings size={16} className="text-foreground" />, label: "Preferences", hasDropdown: true, children: [
+              icon: <Settings size={16} className="text-foreground" />,
+              label: "Preferences",
+              hasDropdown: true,
+              children: [
                 { label: "Theme settings" },
                 { label: "Time zone" },
                 { label: "Default notifications" },
-              ]
+              ],
             },
-            { icon: <Integration size={16} className="text-foreground" />, label: "Integrations" },
+            {
+              icon: <Integration size={16} className="text-foreground" />,
+              label: "Integrations",
+            },
           ],
         },
       ],

@@ -155,4 +155,3 @@ const footerLink = {
 };
 
 export { colors };
-

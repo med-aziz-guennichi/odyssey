@@ -23,4 +23,3 @@ export type * from "./lib/context.js";
 
 // Default export is the core app
 export { default } from "./lib/app.js";
-

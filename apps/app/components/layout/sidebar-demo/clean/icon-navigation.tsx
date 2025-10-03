@@ -6,9 +6,14 @@ import {
   Enterprise,
   Folder,
   Settings,
-  UserMultiple
+  UserMultiple,
 } from "@carbon/icons-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@repo/ui";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@repo/ui";
 import { Avatar } from "./avatar";
 import { IconNavButton } from "./icon-nav-button";
 import { InterfacesLogo } from "./interfaces-logo";
@@ -59,11 +64,8 @@ export function IconNavigation({
                   </IconNavButton>
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="right">
-                {item.label}
-              </TooltipContent>
+              <TooltipContent side="right">{item.label}</TooltipContent>
             </Tooltip>
-
           </TooltipProvider>
         ))}
       </div>

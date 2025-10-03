@@ -42,10 +42,9 @@ function About() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              ODYSSEY was created to bridge the gap between prototype
-              and production. We believe that developers should focus on
-              building great features, not wrestling with configuration and
-              setup.
+              ODYSSEY was created to bridge the gap between prototype and
+              production. We believe that developers should focus on building
+              great features, not wrestling with configuration and setup.
             </p>
             <p className="text-muted-foreground">
               Our template provides a solid foundation with best practices,
@@ -206,9 +205,8 @@ function About() {
         <Card>
           <CardContent className="pt-6 text-center">
             <p className="text-muted-foreground mb-6">
-              ODYSSEY is maintained by Aziz, a team of experienced
-              developers passionate about modern web technologies and developer
-              experience.
+              ODYSSEY is maintained by Aziz, a team of experienced developers
+              passionate about modern web technologies and developer experience.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -243,8 +241,8 @@ function About() {
           Ready to Get Started?
         </h2>
         <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who have chosen ODYSSEY for
-          their next project.
+          Join thousands of developers who have chosen ODYSSEY for their next
+          project.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

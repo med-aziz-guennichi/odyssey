@@ -68,7 +68,7 @@ function AuthErrorFallback({
         <h1 className="mb-2 text-2xl font-bold">Authentication Required</h1>
         <p className="mb-6 text-muted-foreground">
           {error.message === "Unauthorized" ||
-            (error as ErrorWithStatus)?.status === 401
+          (error as ErrorWithStatus)?.status === 401
             ? "Your session has expired. Please sign in again."
             : "You need to sign in to access this page."}
         </p>

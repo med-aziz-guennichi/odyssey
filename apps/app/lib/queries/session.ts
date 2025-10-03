@@ -3,9 +3,9 @@
 
 import type { QueryClient } from "@tanstack/react-query";
 import {
-    queryOptions,
-    useQuery,
-    useSuspenseQuery,
+  queryOptions,
+  useQuery,
+  useSuspenseQuery,
 } from "@tanstack/react-query";
 import type { Session, User } from "better-auth/types";
 import { auth } from "../auth";

@@ -180,10 +180,11 @@ function Users() {
                       </td>
                       <td className="p-4">
                         <span
-                          className={`px-2 py-1 text-xs font-medium rounded-full ${user.status === "Active"
-                            ? "bg-green-100 text-green-700"
-                            : "bg-gray-100 text-gray-700"
-                            }`}
+                          className={`px-2 py-1 text-xs font-medium rounded-full ${
+                            user.status === "Active"
+                              ? "bg-green-100 text-green-700"
+                              : "bg-gray-100 text-gray-700"
+                          }`}
                         >
                           {user.status}
                         </span>

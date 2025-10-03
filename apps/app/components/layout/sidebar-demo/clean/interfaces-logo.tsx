@@ -11,7 +11,10 @@ export function InterfacesLogo({ className, title = "Interfaces" }: Props) {
   return (
     <div
       // text-foreground makes the logo color follow your theme tokens
-      className={cn("relative aspect-[24/24] shrink-0 overflow-hidden text-foreground", className)}
+      className={cn(
+        "relative aspect-[24/24] shrink-0 overflow-hidden text-foreground",
+        className,
+      )}
       aria-label={title}
     >
       <svg
@@ -19,7 +22,7 @@ export function InterfacesLogo({ className, title = "Interfaces" }: Props) {
         role="img"
         aria-hidden={false}
         className="block h-full w-full"
-      // Ensure the whole svg inherits color
+        // Ensure the whole svg inherits color
       >
         <title>{title}</title>
         {/* Use currentColor instead of a hard-coded white fill */}

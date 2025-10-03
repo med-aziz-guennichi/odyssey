@@ -2,4 +2,3 @@
 /* ODYSSEY-License-Identifier: MIT */
 
 export * from "./error";
-

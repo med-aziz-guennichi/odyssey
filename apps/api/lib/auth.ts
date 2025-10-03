@@ -120,11 +120,11 @@ export function createAuth(
       }),
       emailOTP({
         async sendVerificationOTP({ email, otp, type }) {
-         try {
-           await sendOTP(env, { email, otp, type });
-         } catch (error) {
-           console.error("Error sending OTP email:", error);
-         }
+          try {
+            await sendOTP(env, { email, otp, type });
+          } catch (error) {
+            console.error("Error sending OTP email:", error);
+          }
         },
         otpLength: 6,
         expiresIn: 300, // 5 minutes

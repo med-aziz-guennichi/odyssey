@@ -55,7 +55,10 @@ export function SectionTitle({
             className="box-border content-stretch flex flex-row items-center justify-center overflow-clip p-0 relative rounded-lg shrink-0 cursor-pointer transition-all duration-500 hover:bg-muted text-muted-foreground hover:text-neutral-300 size-10 min-w-10"
             style={{ transitionTimingFunction: softSpringEasing }}
           >
-            <ChevronLeft size={16} className="transition-transform duration-500" />
+            <ChevronLeft
+              size={16}
+              className="transition-transform duration-500"
+            />
           </button>
         </div>
       </div>
