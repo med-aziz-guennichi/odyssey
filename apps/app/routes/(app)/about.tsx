@@ -22,7 +22,7 @@ function About() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold tracking-tight mb-6">
-          About React Starter Kit
+          About ODYSSEY
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           A production-ready, full-stack web application template that combines
@@ -42,7 +42,7 @@ function About() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              React Starter Kit was created to bridge the gap between prototype
+              ODYSSEY was created to bridge the gap between prototype
               and production. We believe that developers should focus on
               building great features, not wrestling with configuration and
               setup.
@@ -206,7 +206,7 @@ function About() {
         <Card>
           <CardContent className="pt-6 text-center">
             <p className="text-muted-foreground mb-6">
-              React Starter Kit is maintained by Aziz, a team of experienced
+              ODYSSEY is maintained by Aziz, a team of experienced
               developers passionate about modern web technologies and developer
               experience.
             </p>
@@ -243,7 +243,7 @@ function About() {
           Ready to Get Started?
         </h2>
         <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who have chosen React Starter Kit for
+          Join thousands of developers who have chosen ODYSSEY for
           their next project.
         </p>
 

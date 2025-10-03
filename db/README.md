@@ -1,6 +1,6 @@
 # Database Layer
 
-Welcome to the database layer of our React Starter Kit! This is where the magic happens (or where things break spectacularly if you're not careful). This directory contains everything you need to manage your database schemas, migrations, and that one table you'll inevitably forget to index.
+Welcome to the database layer of our ODYSSEY! This is where the magic happens (or where things break spectacularly if you're not careful). This directory contains everything you need to manage your database schemas, migrations, and that one table you'll inevitably forget to index.
 
 ## Architecture Overview
 

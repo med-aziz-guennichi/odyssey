@@ -17,7 +17,7 @@ const $ = execa({ cwd: rootDir });
  * @see https://code.visualstudio.com/docs/copilot/chat/mcp-servers
  */
 const server = new McpServer({
-  name: "React Starter Kit",
+  name: "ODYSSEY",
   version: "0.0.0",
 });
 
